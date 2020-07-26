@@ -1,10 +1,12 @@
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/31f63a4026.js"></script>
     <script src="script.js"></script>
     <link rel="icon" href="assets/logo.png" type="image/icon type">
     <link rel="stylesheet" href="styles.css" type="text/css"/>
-    <title>Clean Earth: Effects</title>
+	<title>Clean Earth: Effects</title>
   </head>
 
   <body style = "background-image: url(assets/effects.jpg)">
@@ -23,70 +25,136 @@
 
     <div class = "space"></div>
 
-    <article style = "border-bottom: 1px solid hsla(0,0%,8%,.2);">
-        <!--dis where energy content goes-->
-		<h2 style="text-align:center;">Energy</h2>
-		<h3 >How Energy Has Been Affected by COVID-19</h3>
-		<p >Energy usage and installation of renewable energy has decreased significantly due to COVID. As businesses and factories shut down, data from NASA satellites show 
-		that carbon emissions have dropped drastically, but recent articles have implied that this is nothing to “celebrate.” They state that as countries slowly start to reopen 
-		global carbon emissions will be at its all-time highest. It is very important for us to take the right precautions now and make a switch to renewable energy. 
-		During the pandemic, coal demand was down 35 to 45% which forced prices to drop making it less profitable but renewable energy was unharmed. Even though renewable 
-		energy reached its peak this year, IEA stated that it is expected to slow down due to constructions being delayed, supply chain disruptions, lockdown measures, and 
-		social distancing regulations. Increased use of renewable energy will continue to hurt the profitability of the coal industry until they are forced out of business.</p>
-		<h3>Problems </h3>
-		<p>According to the EIA, the industrial sector accounts for approximately 32% of total U.S energy consumption. This encompasses energy produced by natural gas, fossil fuels,
-		and a small portion of renewable energy. The use of non-renewable energy is much more expensive and has a larger carbon footprint than renewable energy sources. Furthermore burning 
-		fossil fuels contributes to decreased air quality.</p>
-		<h3>Our Solution</h3>
-		<p>	We propose that we use this opportunity to transition to renewable energy and begin shutting down coal power plants. If the industrial industry transitions to full 
-		reliance on green energy many other sectors are likely to follow, furthermore carbon emissions would drop a substantial amount, slowing global warming.</p>
+	<article style = "border-bottom: 1px solid hsla(0,0%,8%,.2);">
+        <h2 class = "overline" onClick = "document.getElementById('airProblems').style.display = 'none'; 
+		document.getElementById('airEffects').style.display = 'none'; document.getElementById('default').style.display = 'block'; 
+		document.getElementById('waterEffects').style.display = 'none'; document.getElementById('energyEffects').style.display = 'none'; 
+		document.getElementById('waterProblems').style.display = 'none'; document.getElementById('energyProblems').style.display = 'none'; 
+		document.getElementById('airContainer').style.width = '26.10%'; document.getElementById('waterContainer').style.width = '26.10%'
+		document.getElementById('energyContainer').style.width = '26.10%';">An interactive simulation:</h2>
+		<img src = "assets/factory.png" class = "simulation" id = "default">
+		<img src = "assets/co2.png" class = "simulation" id = "airEffects" style = "display: none">
+		<img src = "assets/fish-bone.png" class = "simulation" id = "waterEffects" style = "display: none">
+		<img src = "assets/energy-effects.png" class = "simulation" id = "energyEffects" style = "display: none">
+
+		<div class = "choices" id = "airContainer" onClick = "document.getElementById('airProblems').style.display = 'block'; 
+		document.getElementById('airEffects').style.display = 'block'; document.getElementById('default').style.display = 'none'; 
+		document.getElementById('waterEffects').style.display = 'none'; document.getElementById('energyEffects').style.display = 'none'; 
+		document.getElementById('waterProblems').style.display = 'none'; document.getElementById('energyProblems').style.display = 'none'; 
+		document.getElementById('airContainer').style.width = 'inherit'; document.getElementById('waterContainer').style.width = '26.10%'
+		document.getElementById('energyContainer').style.width = '26.10%';">
+		  <h3>Air ☁️</h3>
+		  <p id = "airProblems" style = "display: none;">
+			Factories are major contributors to air pollution. 
+			<a href = "https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions#:~:text=Carbon%20dioxide%20(CO2)%20makes,natural%20gas%2C%20to%20produce%20electricity." target = "_blank">According to the EPA</a>,
+			22% of greenhouse gases emitted by the 
+			economic sector in 2018 were from industry. Burning fossil fuels and other organic material in factories is the source 
+			of several air pollutants, primarily nitrogen oxides, which can cause respiratory irritation and asthma and create ozone, 
+			sulfur dioxide, which can lead to bronchitis and emphysema, and particulate matter, which can accumulate in and damage lung
+			tissue and increases the likelihood of heart disease and lung cancer. The presence of these pollutants can also lead to the 
+			formation of acid rain. Acid rain has many detrimental impacts on the environment, including leaching nutrients from the soil, 
+			increasing aluminum levels in soil (which can be toxic to humans), corroding buildings, and disrupting marine ecosystems. Clearly, 
+			the effects of factory activity on the environment are damaging, but how can we fix them?
+		  </p>
+		</div>
+
+		<div class = "choices" id = "waterContainer" onClick = "document.getElementById('waterProblems').style.display = 'block'; 
+		document.getElementById('waterEffects').style.display = 'block'; document.getElementById('default').style.display = 'none'; 
+		document.getElementById('airEffects').style.display = 'none'; document.getElementById('energyEffects').style.display = 'none'; 
+		document.getElementById('airProblems').style.display = 'none'; document.getElementById('energyProblems').style.display = 'none'; 
+		document.getElementById('waterContainer').style.width = 'inherit'; document.getElementById('airContainer').style.width = '26.10%'
+		document.getElementById('energyContainer').style.width = '26.10%';">
+		  <h3>Water 🌊</h3>
+		  <p id = "waterProblems" style = "display: none;">
+			Factories not only emit into the air, but they also release harmful chemicals into water as well. 
+			Many of these chemicals are released into groundwater, which is used as drinking water by 115 million people — more than ⅓ of the US population. 
+			According to an article released by the United States Geological Society (<a href = "https://www.usgs.gov/news/quality-nation%E2%80%99s-groundwater" target = "_blank">USGS</a>), 1 of every 5 groundwater samples from parts of aquifers used for 
+			drinking water contained a contaminant from geologic or manmade sources at a level exceeding a potential human-health concern. Many of these water 
+			pollutants and chemicals can cause negative health effects, such as lead, which can cause illness in animals and humans because lead inhibits the 
+			action of bodily enzymes. Furthermore, their greenhouse gas emissions are a key factor in causing acid rain, which can have a detrimental effect on
+			plant life as well as marine life.
+		  </p>
+		</div>
+		
+        <div class = "choices" id = "energyContainer" onClick = "document.getElementById('energyProblems').style.display = 'block'; 
+		document.getElementById('energyEffects').style.display = 'block'; document.getElementById('default').style.display = 'none'; 
+		document.getElementById('airEffects').style.display = 'none'; document.getElementById('waterEffects').style.display = 'none'; 
+		document.getElementById('airProblems').style.display = 'none'; document.getElementById('waterProblems').style.display = 'none'; 
+		document.getElementById('energyContainer').style.width = 'inherit'; document.getElementById('airContainer').style.width = '26.10%'
+		document.getElementById('waterContainer').style.width = '26.10%';">
+		  <h3>Energy ☀️</h3>
+		  <p id = "energyProblems" style = "display: none">
+			According to the EIA, the industrial sector accounts for <a href = "https://www.eia.gov/energyexplained/use-of-energy/" target = "_blank">approximately 32%</a> of total U.S energy consumption. 
+			This encompasses energy produced by natural gas, fossil fuels, and a small portion of renewable energy. 
+			The use of non-renewable energy is much more expensive and has a larger carbon footprint than renewable
+			energy sources. Furthermore burning fossil fuels contributes to decreased air quality.
+		  </p>
+        </div>
+        <br><br>
 	</article>
-	
+	  
 
 	<article style = "border-bottom: 1px solid hsla(0,0%,8%,.2);">
 		<!--dis where air content goes-->
 		<h2 style="text-align:center;" >Air</h2>
-		<h3 >How Air Has Been Affected by COVID-19</h3>
-		<p >Across the world, economic slowdowns have reduced the rate of industrial production, pausing the emission of greenhouse gases and resulting in cleaner air. Following the COVID-19
-		outbreak in China, NASA’s Aura satellite and ESA’s Sentinel-5 satellite have observed a significant drop in nitrogen dioxide levels over China. Nitrogen dioxide is a gas produced by 
-		industrial production, automobiles, and power plants. It is also a precursor to ozone, which can be harmful to our lungs, so it is important to limit its emission. Similar declines in
-		nitrogen dioxide levels have been observed by NASA across South America. Air pollution is the cause of many respiratory illnesses that may make some people in polluted cities more susceptible
-		to the virus, meaning that air pollution may increase the severity of COVID-19 outbreaks. COVID-19 has shown us how the world looks without air pollution and emphasized the importance of reducing it. </p>
-		<h3 >Problems </h3>
-		<p >Factories are major contributors to air pollution. According to the EPA, 22% of greenhouse gases emitted by the economic sector in 2018 were from industry. Burning fossil fuels and other
-		organic material in factories is the source of several air pollutants, primarily nitrogen oxides, which can cause respiratory irritation and asthma and create ozone, sulfur dioxide, which can
-		lead to bronchitis and emphysema, and particulate matter, which can accumulate in and damage lung tissue and increases the likelihood of heart disease and lung cancer. The presence of these
-		pollutants can also lead to the formation of acid rain. Acid rain has many detrimental impacts on the environment, including leaching nutrients from the soil, increasing aluminum levels in soil 
-		(which can be toxic to humans), corroding buildings, and disrupting marine ecosystems. Clearly, the effects of factory activity on the environment are damaging, but how can we fix them?</p>
-		<h3 >Our Solution</h3>
-		<p >	We propose using more scrubbers, which remove pollutants from factories before they leave the smokestacks, to reduce the levels of air pollution. We also suggest expanding the Clean Air Act, 
-		which gives factories incentives to limit their sulfur dioxide emissions below a certain level. These actions will take steps towards improving our air quality. </p>
+		<div style = "display: inline-flex">
+			<div style = "float: left; max-width: 700px;">
+				<h3>How Air Has Been Affected by COVID-19</h3>
+				<p>Across the world, economic slowdowns have reduced the rate of industrial production, pausing the emission of greenhouse gases and resulting in cleaner air. Following the COVID-19
+				outbreak in China, NASA’s Aura satellite and ESA’s Sentinel-5 satellite have observed a significant <a href = "https://earthobservatory.nasa.gov/images/146362/airborne-nitrogen-dioxide-plummets-over-china" target = "_blank">drop in nitrogen dioxide levels over China</a>. 
+				Nitrogen dioxide is a gas produced by industrial production, automobiles, and power plants. It is also a precursor to ozone, which can be harmful to our lungs, so it is important to limit its emission. Similar declines in
+				nitrogen dioxide levels have been observed <a href = "https://airquality.gsfc.nasa.gov/" target = "_blank">by NASA</a> across South America. Air pollution is the cause of many respiratory illnesses that may make some people in polluted cities more susceptible
+				to the virus, meaning that air pollution may <a href = "https://www.nasa.gov/feature/goddard/2020/nasa-funds-four-research-projects-on-covid-19-impacts" target = "_blank">increase the severity</a> of COVID-19 outbreaks. COVID-19 has shown us how the world looks without air pollution and emphasized the importance of reducing it. </p>
+				<h3>Our Solution</h3>
+				<p>We propose using more scrubbers, which remove pollutants from factories before they leave the smokestacks, to reduce the levels of air pollution. We also suggest expanding the Clean Air Act, 
+				which gives factories incentives to limit their sulfur dioxide emissions below a certain level. These actions will take steps towards improving our air quality. </p>
+			</div>
+			<img src = "assets/airimg.PNG" style = "padding: 45px 30px; width: 600px; height: 400px; float: right">
+		</div>
     </article>
 	
-	<article>
+	<article style = "border-bottom: 1px solid hsla(0,0%,8%,.2);">
         <!--dis where water content goes-->
 		<h2 style="text-align:center;">Water</h2>
-		<h3>How Water Has Been Affected by COVID-19</h3>
-		<p>With the decrease in emissions from factories, the amount of runoff from the emissions into the water have decreased and cleared the water. However, many people are now using disposable masks, gloves and hand 
-		sanitizer daily to keep themselves and their loved ones protected. These finished plastic hand sanitizer bottles and used gloves and masks are being discarded onto the ground instead of into trash cans or recycling 
-		bins. With the pandemic having impacted every state in the United States and the majority of the world, it is no surprise that all of this litter has led to the accumulation of waste in oceans. According to an 
-		article published in The Guardian, if people do not stop throwing their one-time use masks, gloves, and empty hand sanitizer bottles onto the ground, there will eventually be more “COVID waste,” in the oceans than
-		there are jellyfish. 
-		Furthermore, the problem of lacking access to water, let alone clean water, has been exacerbated by COVID-19. At one point, it was common to see empty shelves at the grocery store where many cases of water 
-		had once been because people were panicking and buying up all the essentials. This made access to bottled water-scarce for many weeks at the peak of the pandemic. For many people in the US, they never had 
-		access to clean water in the first place. 30% of the population of the Navajo Nation, a United States Indian Reservation which sits on parts of northeastern Arizona, southeastern Utah, and northwestern New 
-		Mexico, did not have access to clean water before the pandemic. At one point in the pandemic, their infection rates were higher than that of New York, which shows the impact of lack of clean water--people 
-		are unable to wash their hands or shower with water that is not contaminated</p>
-		<h3>Problems </h3>
-		<p>Factories are major contributors to air pollution. According to the EPA, 22% of greenhouse gases emitted by the economic sector in 2018 were from industry. Burning fossil fuels and other
-		organic material in factories is the source of several air pollutants, primarily nitrogen oxides, which can cause respiratory irritation and asthma and create ozone, sulfur dioxide, which can
-		lead to bronchitis and emphysema, and particulate matter, which can accumulate in and damage lung tissue and increases the likelihood of heart disease and lung cancer. The presence of these
-		pollutants can also lead to the formation of acid rain. Acid rain has many detrimental impacts on the environment, including leaching nutrients from the soil, increasing aluminum levels in soil 
-		(which can be toxic to humans), corroding buildings, and disrupting marine ecosystems. Clearly, the effects of factory activity on the environment are damaging, but how can we fix them?</p>
+		<div style = "display: inline-flex">
+			<div style = "float: right; max-width: 700px;">
+				<h3>How Water Has Been Affected by COVID-19</h3>
+				<p>With the decrease in emissions from factories, the amount of runoff from the emissions into the water have decreased and cleared the water. However, many people are now using disposable masks, gloves and hand 
+				sanitizer daily to keep themselves and their loved ones protected. These finished plastic hand sanitizer bottles and used gloves and masks are being discarded onto the ground instead of into trash cans or recycling 
+				bins. With the pandemic having impacted every state in the United States and the majority of the world, it is no surprise that all of this litter has led to the accumulation of waste in oceans. According to an 
+				article published in The Guardian, if people do not stop throwing their one-time use masks, gloves, and empty hand sanitizer bottles onto the ground, 
+				<a href = "https://www.theguardian.com/environment/2020/jun/08/more-masks-than-jellyfish-coronavirus-waste-ends-up-in-ocean" target = "_blank">there will eventually be more “COVID waste,” in the oceans than
+				there are jellyfish</a>.
+				Furthermore, the problem of lacking access to water, let alone clean water, has been exacerbated by COVID-19. At one point, it was common to see empty shelves at the grocery store where many cases of water 
+				had once been because people were panicking and buying up all the essentials. This made access to bottled water-scarce for many weeks at the peak of the pandemic.</p>
+			</div>
+			<img src = "assets/waterimg.PNG" style = "padding: 45px 30px; width: 600px; height: 400px; float: right">
+		</div>
+		<p style = "margin-top: -2%">For many people in the US, they never had access to clean water in the first place. 30% of the population of the Navajo Nation, a United States Indian Reservation which sits on parts of northeastern Arizona,
+			southeastern Utah, and northwestern New 
+			Mexico, did not have access to clean water before the pandemic. At one point in the pandemic, their infection rates were  <a href = "https://www.theverge.com/2020/7/6/21311211/navajo-nation-covid-19-running-water-access" target = "_blank">higher than that of New York</a>, which shows the impact of lack of clean water--people 
+			are unable to wash their hands or shower with water that is not contaminated
+		</p>
 		<h3>Our Solution</h3>
-		<p>	We propose using more scrubbers, which remove pollutants from factories before they leave the smokestacks, to reduce the levels of air pollution. We also suggest expanding the Clean Air Act, 
-		which gives factories incentives to limit their sulfur dioxide emissions below a certain level. These actions will take steps towards improving our air quality. </p>
-    </article>
+		<p>We propose using more scrubbers, which remove pollutants from factories before they leave the smokestacks, to reduce the levels of air pollution. We also suggest expanding the Clean Air Act, 
+		which gives factories incentives to limit their sulfur dioxide emissions below a certain level. These actions will take steps towards improving our air quality. 
+		</p>
+	</article>
+	
+	<article style = "border-bottom: 1px solid hsla(0,0%,8%,.2);">
+        <!--dis where energy content goes-->
+		<h2 style="text-align:center;">Energy</h2>
+		<h3>How Energy Has Been Affected by COVID-19</h3>
+		<p>Energy usage and installation of renewable energy has <a href = "https://www.utilitydive.com/news/utilities-are-beginning-to-see-the-load-impacts-of-covid-19-as-economic-sh/574632/" target = "_blank">decreased significantly</a> due to COVID. As businesses and factories shut down, data from NASA satellites show 
+		that carbon emissions have dropped drastically, but recent articles have implied that this is nothing to “celebrate.” They state that as countries slowly start to reopen 
+		global carbon emissions will be at its all-time highest. It is very important for us to take the right precautions now and make a switch to renewable energy. 
+		During the pandemic, coal demand was down 35 to 45% which forced prices to drop making it <a href = "https://www.pwc.com/us/en/library/covid-19/coronavirus-energy-industry-impact.html" target = "_blank">less profitable</a> but renewable energy was unharmed. Even though renewable 
+		energy reached its peak this year, <a href = "https://www.iea.org/articles/the-impact-of-the-covid-19-crisis-on-clean-energy-progress" target = "_blank">IEA stated</a> that it is expected to slow down due to constructions being delayed, supply chain disruptions, lockdown measures, and 
+		social distancing regulations. Increased use of renewable energy will <a href = "https://www.iea.org/reports/covid-19-impact-on-electricity" target = "_blank">continue to hurt</a> the profitability of the coal industry until they are forced out of business.</p>
+		<h3>Our Solution</h3>
+		<p>	We propose that we use this opportunity to transition to renewable energy and begin shutting down coal power plants. If the industrial industry transitions to full 
+		reliance on green energy many other sectors are likely to follow, furthermore carbon emissions would drop a substantial amount, slowing global warming.</p>
+	</article>
 
    <footer>
        <!--do this last-->
