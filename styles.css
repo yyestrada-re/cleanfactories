@@ -103,7 +103,6 @@ p, .modal-content li {
 
 article a {
     color: #B11B00;
-    text-decoration: none;
 }
 
 /*footer*/
@@ -233,10 +232,10 @@ footer h3 {
     cursor: pointer;
 }
 
-.modal-content img {
+.element {
     width: 100%;
     max-width: 150px;
-    margin: -8% 43% 0% 43%; /*top right bottom left*/
+    margin: -5% 43% 0% 43%; /*top right bottom left*/
 }
 
 .modal-content h1 {
@@ -250,10 +249,11 @@ button {
     color: #fff;
     background-color: #1abc9c;
     vertical-align: middle;
+    font-family: 'Open Sans';
     border: .125rem solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    margin: 0% 43.65%;
+    margin: 0% 43.3%;
     border-radius: .5rem;  
 }

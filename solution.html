@@ -91,22 +91,26 @@
             <span class = "close" onClick = "document.getElementById('airModal').style.display = 'none'"><i class="fas fa-times"></i></span>
             <div style = "padding: 50px;">
               <h1>Air</h1>
-              <img src = "assets/cloud.png">
-              <ol>
-                <li>Increase in the use of scrubbers in factories</li>
-                <ul>
-                  <li>We propose using more scrubbers, which remove pollutants from factories before they leave the smokestacks, to reduce the levels of air pollution. </li>
-                  <li>This graph shows the necessity of removing greenhouse gases from the atmosphere in order to slow the rate of global warming. </li>
-                  <li>Scrubbers remove 98% of sulfur from emitted gases.</li>
-                </ul>
-                <li>Expand the Clean Air Act</li>
-                <ul>
-                  <li>
-                    We also suggest expanding the Clean Air Act, which gives factories incentives to limit their sulfur dioxide emissions below a certain level. 
-                    These actions will take steps towards improving our air quality. 
-                  </li>
-                </ul>
-              </ol>
+              <img src = "assets/cloud.png" class = "element" style = "margin: -9% 43% 0% 43%;">
+              <div style = "display: inline-flex; max-width: 1100px">
+                <ol style = "float: left; max-width: 650px">
+                  <h3><li>Increase in the use of scrubbers in factories</li></h3>
+                  <ul>
+                    <li>We propose using more scrubbers, which remove pollutants from factories before they leave the smokestacks, to reduce the levels of air pollution. </li>
+                    <li>The <a href = "https://www.wri.org/blog/2020/06/6-ways-remove-carbon-pollution-sky" target = "_blank">graph</a> on the right shows the necessity of removing greenhouse gases from the atmosphere in order to slow the rate of global warming. </li>
+                    <li>Scrubbers remove <a href = "https://energyeducation.ca/encyclopedia/Scrubber" target = "_blank">98% of sulfur from emitted gases.</a></li>
+                  </ul>
+                  <h3><li>Expand the Clean Air Act</li></h3>
+                  <ul>
+                    <li>
+                      We also suggest expanding the Clean Air Act, which gives factories incentives to limit their sulfur dioxide emissions below a certain level. 
+                      These actions will take steps towards improving our air quality. 
+                    </li>
+                  </ul>
+                </ol>
+                <img src = "assets/graph.png" style = "float: right; width: 500px; height: 380px; padding: 25px 35px 0px 35px;">
+              
+              </div>
             </div>
             <button type = "button" onClick = "document.getElementById('airModal').style.display = 'none'"><i class="fas fa-times fa-fw"></i>Close Window</button>
           </div>
@@ -116,30 +120,36 @@
         <div id = "waterModal" class = "modal">
           <div class="modal-content">
             <span class = "close" onClick = "document.getElementById('waterModal').style.display = 'none'"><i class="fas fa-times"></i></span>
-            <h1>Water</h1>
-            <ol>
-              <li>Promoting pollution prevention (P2) practices through employee training</li>
-              <ul>
-                <li>
-                  We propose that at all factories, or at more factories, the employees receive training in terms 
-                  of having the knowledge they need in order to minimize waste generation. Employees could learn more
-                  about spill/leak prevention methods. Ultimately, employees would know more about source reduction.
-                  According to the EPA website, “the opportunities for source reduction are not realized as existing
-                  regulations focus upon treatment and disposal.
-                </li>
-                <li>Using less toxic chemicals in factories</li>
-              </ul>
-              <li>Encourage factories to utilize the EPA’s Pollution Prevention resources</li>
-              <li>Regulating more chemicals found in water</li>
-              <ul>
-                <li>
-                  While the Environmental Protection Agency (EPA) has identified and regulates 94 chemicals that are commonly found in contaminated water, 
-                  there are still many other chemicals that the EPA has not accounted for that could be potentially dangerous to animal, plant and/or human
-                  life. We propose that we will reach out to the EPA in hopes of working with them to identify these other potentially-harmful pollutants 
-                  and begin to regulate them.
-                </li>
-              </ul>
-            </ol>
+            <div style = "padding: 50px;">
+              <h1>Water</h1>
+              <img src = "assets/water.png" class = "element">
+              <div style = "display: inline-flex; max-width: 1100px">
+                <ol>
+                  <h3><li>Promoting pollution prevention (P2) practices through employee training</li></h3>
+                  <ul>
+                    <li>
+                      We propose that at all factories, or at more factories, the employees receive training in terms of having the knowledge they need in 
+                      order to minimize waste generation. Employees could learn more about spill/leak prevention methods. Ultimately, employees would know 
+                      more about source reduction. According to the EPA website, “the opportunities for source reduction are not realized as existing 
+                      regulations focus upon treatment and disposal.”
+                    </li>
+                    <li>Using less toxic chemicals in factories</li>
+                  </ul>
+                  <h3><li>Encourage factories to utilize the EPA’s Pollution Prevention resources</li></h3>
+                  <h3><li>Regulating more chemicals found in water</li></h3>
+                  <ul>
+                    <li>
+                      While the Environmental Protection Agency (EPA) has identified and regulates 94 chemicals that 
+                      are commonly found in contaminated water, there are still many other chemicals that the EPA has
+                      not accounted for that could be potentially dangerous to animal, plant and/or human life. We
+                      propose that we will reach out to the EPA in hopes of working with them to identify these 
+                      other potentially-harmful pollutants and begin to regulate them.
+                    </li>
+                  </ul>
+                </ol>
+              </div>
+            </div>
+            <button type = "button" onClick = "document.getElementById('waterModal').style.display = 'none'"><i class="fas fa-times fa-fw"></i>Close Window</button>
           </div>
         </div>
 
@@ -147,18 +157,25 @@
         <div id = "energyModal" class = "modal">
           <div class="modal-content">
             <span class = "close" onClick = "document.getElementById('energyModal').style.display = 'none'"><i class="fas fa-times"></i></span>
-           <h1>Energy</h1>
-           <ol>
-             <li>Switching to renewable energies</li>
-             <ul>
-               <li>
-                 We propose that we use this opportunity to transition to renewable energy and begin shutting down coal power plants. 
-                 If the industrial industry transitions to full reliance on green energy many other sectors are likely to follow, 
-                 furthermore carbon emissions would drop a substantial amount, slowing global warming.
-              </li>
-              <li>According to the EPA, switching to renewable energy sources will prevent the emission of greenhouse gases, limit air pollution, and create jobs.</li>
-             </ul>
-           </ol>
+            <div style = "padding: 50px;">
+              <h1>Energy</h1>
+              <img src = "assets/energy.png" class = "element">
+              <div style = "display: inline-flex; max-width: 1100px">
+                <ol>
+                  <h3><li>Switching to renewable energies</li></h3>
+                  <ul>
+                    <li>
+                      We propose that we use this opportunity to transition to renewable energy and begin 
+                      shutting down coal power plants. If the industrial industry transitions to full reliance 
+                      on green energy many other sectors are likely to follow, furthermore carbon emissions would 
+                      drop a substantial amount, slowing global warming.
+                    </li>
+                    <li>According to the <a href = "http://epa.gov/statelocalenergy/local-renewable-energy-benefits-and-resources" target = "_blank">EPA</a>, switching to renewable energy sources will prevent the emission of greenhouse gases, limit air pollution, and create jobs.</li>
+                  </ul>
+                </ol>
+              </div>
+            </div>
+            <button type = "button" onClick = "document.getElementById('energyModal').style.display = 'none'"><i class="fas fa-times fa-fw"></i>Close Window</button>
           </div>
         </div>
 
@@ -166,20 +183,27 @@
         <div id = "individualModal" class = "modal">
           <div class="modal-content">
             <span class = "close" onClick = "document.getElementById('individualModal').style.display = 'none'"><i class="fas fa-times"></i></span>
-           <h1>Reaching Out</h1>
-           <ol>
-             <li>Write to local factories and encourage them to make a change</li>
-             <ul>
-               <li>
-                Use the templates provided to urge factories near you to practice more sustainable methods of production. 
-              </li>
-             </ul>
-           </ol>
+            <div style = "padding: 50px;">
+              <h1>Reaching Out</h1>
+              <img src = "assets/petition.png" class = "element">
+              <div style = "display: inline-flex; max-width: 1100px">
+                <ol>
+                  <h3><li>Writing to local factories and encouraging them to make a change.</li></h3>
+                  <ul>
+                    <li>
+                      While there is only so much we can do on an individual level, we have to power to put pressure on local factories and encourage them to make a change.
+                      After all, industrial pollution does not have isolated effects. It affects you, your neighbor, and your overall community. So use your voice to incite change!
+                    </li>
+                    <li>Use the templates provided to urge factories near you to practice more sustainable methods of production.</li>
+                  </ul>
+                </ol>
+              </div>
+            </div>
+            <button type = "button" onClick = "document.getElementById('individualModal').style.display = 'none'"><i class="fas fa-times fa-fw"></i>Close Window</button>
           </div>
         </div>
 
       </section>
-      <div class = "space"></div>
     </article>
 
    <footer>
