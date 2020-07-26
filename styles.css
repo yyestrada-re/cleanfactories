@@ -49,7 +49,7 @@ body {
 }
 
 .nav-logo {
-    height: 65px;
+    height: 80px;
 }
 
 .space {
@@ -91,4 +91,9 @@ h1, h2, h3 {
 
 p {
     font-family: GlacialIndifference-Reg;
+}
+
+.overline {
+    border-top: 5px solid #008C4E;
+    width: fit-content;
 }
